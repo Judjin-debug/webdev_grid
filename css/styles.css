@@ -1,13 +1,16 @@
 .grid {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 300px;
-    border: 1px dotted black;
-    align-items: center; /* stretch start end center */
-    justify-items: center; /* stretch start end center */
+    height: 600px;
+    grid-gap: 15px;
+    border: 1px dashed #000;
+    justify-content: space-evenly; 
+    /*  start | end | center | stretch | space-around | space-between | space-evenly */
+    align-content: space-evenly;
+    /*  start | end | center | stretch | space-around | space-between | space-evenly */
 }
   
-.grid-item-1 {
-    /* align-self: center;
-    justify-self: center; */ /* stretch start end center */
+.grid-item {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
 }
