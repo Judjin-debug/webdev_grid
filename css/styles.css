@@ -8,7 +8,7 @@ html {
 
 .grid-item {
     font-size: 24px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
     color: #fff;
     text-shadow: #000 0px 2px 5px;
     font-weight: 700;
@@ -17,16 +17,16 @@ html {
 
 .grid-item-1 {
     background: linear-gradient(
-        90deg,
-        #FF9899,
-        #C51E3A
+        #E0B0FF,
+        #DF73FF
     );
 }
 
 .grid-item-2 {
-    background: linear-gradient(
-        #E0B0FF,
-        #DF73FF
+    background: linear-gradient(     
+        90deg,
+        #FF9899,
+        #C51E3A
     );
 }
 
@@ -38,18 +38,28 @@ html {
     );
 }
 
+.grid-item-4 {
+    background: linear-gradient(
+        90deg,
+        #ACE1AF,
+        #CCCCFF
+    );
+}
+
+.grid-item-5 {
+    background: linear-gradient(
+        #D8BFD8,
+        #FDFD96
+    );
+}
+
 /* -------------------------------------------- */
 
 .grid {
     display: grid;
-    gap: 5px;
+    gap: 10px;
     height: 100vh;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-auto-flow: row dense;
-}
-
-.grid-item:nth-of-type(2),
-.grid-item:nth-of-type(3) {
-    grid-column: span 2;
+    /* auto fill chooses the number of columns to display depending on their size */
+    /* auto fit stretches the element to reduce empty space */
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
 }
