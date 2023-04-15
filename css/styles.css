@@ -38,16 +38,38 @@ html {
     );
 }
 
+.grid-item-4 {
+    background: linear-gradient(
+        90deg,
+        #ACE1AF,
+        #CCCCFF
+    );
+}
+
+/* .grid-2 {
+    background: linear-gradient(
+        #D8BFD8,
+        #FDFD96
+    );
+} */
+
 /* -------------------------------------------- */
 
 .grid {
     display: grid;
-    gap: 5px;
-    height: 100vh;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, auto));
 }
 
-.grid-item:nth-of-type(2) {
-    order: -1;
+.grid-1 {
+    height: 100vh;
+}
+
+.grid-2 {
+    grid-gap: 5px;
+    grid-template-columns: 1fr 5fr;
+}
+
+.grid-item-5 {
+    grid-column: span 2;
 }
