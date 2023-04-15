@@ -10,7 +10,7 @@ html {
     font-size: 24px;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
-    text-shadow: #000 0px 0px 5px;
+    text-shadow: #000 0px 2px 5px;
     font-weight: 700;
     padding: 5px;
     height: 200px;
@@ -27,16 +27,16 @@ html {
 
 .grid-item-2 {
     background: linear-gradient(
-        #e4abf5,
-        #cd86fc
+        #E0B0FF,
+        #DF73FF
     );
 }
 
 .grid-item-3 {
     background: linear-gradient(
         90deg,
-        #64fa84,
-        #64faaa
+        #98FB98,
+        #50C878
     );
 }
 
