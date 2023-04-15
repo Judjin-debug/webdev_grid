@@ -6,23 +6,21 @@ html {
     box-sizing: inherit;
 }
 
-.grid-item {
-    font-size: 24px;
-    font-family: Arial;
+body {
+    font: 900 20px Arial;
     color: #fff;
     text-shadow: #000 0px 2px 5px;
-    font-weight: 700;
-    padding: 5px;
+    text-align: center;
 }
 
-.grid-item-1 {
+.element-1 {
     background: linear-gradient(
         #E0B0FF,
         #DF73FF
     );
 }
 
-.grid-item-2 {
+.element-2 {
     background: linear-gradient(     
         90deg,
         #FF9899,
@@ -30,7 +28,7 @@ html {
     );
 }
 
-.grid-item-3 {
+.element-3 {
     background: linear-gradient(
         90deg,
         #98FB98,
@@ -38,7 +36,7 @@ html {
     );
 }
 
-.grid-item-4 {
+.element-4 {
     background: linear-gradient(
         90deg,
         #ACE1AF,
@@ -46,20 +44,86 @@ html {
     );
 }
 
-.grid-item-5 {
+.element-5 {
     background: linear-gradient(
         #D8BFD8,
         #FDFD96
+    );
+
+}
+
+.element-6 {
+    background: linear-gradient(
+        90deg,
+        #44a1ee,
+        #eb5656
+    );
+}
+
+.content {
+    background: linear-gradient(
+        #fa92bd,
+        #f5b2ce
     );
 }
 
 /* -------------------------------------------- */
 
-.grid {
+body {
     display: grid;
-    gap: 10px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(150px, 200px) 1fr minmax(150px, 200px);
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
     height: 100vh;
-    /* auto fill chooses the number of columns to display depending on their size */
-    /* auto fit stretches the element to reduce empty space */
-    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+aside {
+    grid-area: aside;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+@media only screen and (max-width: 767px) {
+    aside {
+        display: none;
+    }
+    body {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "header header"
+            "nav main"
+            "footer footer";
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    aside {
+        display: none;
+    }
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
 }
